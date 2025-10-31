@@ -1,0 +1,62 @@
+/* Styl dla navbar */
+.navbar {
+    background-color: #91e0c2 !important;
+}
+
+/* Kolor tekstu w navbarze */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.8);
+}
+
+/* Stylowy kontener powitalny */
+.welcome-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+.welcome-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.welcome-card .card-body {
+    padding: 3rem 2rem;
+}
+
+.welcome-title {
+    color: #2c3e50;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Georgia', serif;
+}
+
+.welcome-text {
+    color: #666;
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* Dekoracyjny element */
+.welcome-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #91e0c2, #66c7a4);
+}
+
+/* Styl dla footera */
+footer.bg-light {
+    background-color: #e9fff542 !important; /* Jaśniejszy odcień pasujący do navbara */
+}
+ 
