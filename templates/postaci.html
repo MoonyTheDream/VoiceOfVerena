@@ -3,10 +3,49 @@
 {% block title %}Kreator Postaci{% endblock %}
 
 {% block content %}
-<div class="card">
-    <div class="card-body text-center">
-            <h1 class="display-4">Tu bydom rzecza.</h1>
-        <p class="lead mt-3">Zaiste.</p>
+<div class="welcome-card mb-4">
+    <div class="card-body">
+        <h1 class="welcome-title display-4 text-center">Kreator Postaci</h1>
+        <p class="welcome-text text-center">Szybkie NPCowe ludziki (i nieludzie).</p>
     </div>
 </div>
+
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <form method="post">
+            <div class="mb-3">
+                <label for="race" class="form-label">Wybierz rasę:</label>
+                <select class="form-select" id="race" name="race" required>
+                    <option value="" {% if not race %}selected{% endif %}>-- wybierz --</option>
+                    <option value="człowiek" {% if race == 'człowiek' %}selected{% endif %}>Człowiek</option>
+                    <option value="elf" {% if race == 'elf' %}selected{% endif %}>Elf</option>
+                    <option value="niziołek" {% if race == 'niziołek' %}selected{% endif %}>Niziołek</option>
+                    <option value="krasnolud" {% if race == 'krasnolud' %}selected{% endif %}>Krasnolud</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="profession" class="form-label">Wybierz profesję (opcjonalnie):</label>
+                <select class="form-select" id="profession" name="profession">
+                    <option value="losowa" {% if profession == 'losowa' or not profession %}selected{% endif %}>losowa</option>
+                    <option value="wojownik" {% if profession == 'wojownik' %}selected{% endif %}>Wojownik</option>
+                    <option value="mag" {% if profession == 'mag' %}selected{% endif %}>Mag</option>
+                    <option value="złodziej" {% if profession == 'złodziej' %}selected{% endif %}>Złodziej</option>
+                    <option value="kapłan" {% if profession == 'kapłan' %}selected{% endif %}>Kapłan</option>
+                    <option value="łowca" {% if profession == 'łowca' %}selected{% endif %}>Łowca</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Generuj postać</button>
+        </form>
+    </div>  
+</div>
+    
+{% if result %}
+<div class="card shadow-sm">
+    <div class="card-body">
+        <div class="alert alert-info mb-0">
+            <strong>Wynik:</strong> {{ result }} A tu jeszcze mordeczko {{ debug }}
+        </div>
+    </div>
+</div>
+{% endif %}
 {% endblock %}

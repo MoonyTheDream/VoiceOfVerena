@@ -25,7 +25,7 @@
 }
 
 .welcome-card .card-body {
-    padding: 3rem 2rem;
+    padding: 1rem 1rem;
 }
 
 .welcome-title {
@@ -33,16 +33,16 @@
     font-weight: 600;
     letter-spacing: 0.5px;
     margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     font-family: 'Georgia', serif;
 }
 
 .welcome-text {
     color: #666;
-    font-size: 1.25rem;
-    font-style: italic;
+    font-size: 1.15rem;
+    font-style: italic; 
     margin-top: 1rem;
-}
+}   
 
 /* Dekoracyjny element */
 .welcome-card::before {
